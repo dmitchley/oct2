@@ -1,0 +1,28 @@
+<h1>Match</h1>
+
+{{welcomeMessage}}
+
+{{match.teams.[0]}} vs. {{match.teams.[1]}} at {{match.time_london}}
+
+<div class="match-odds-cont">
+  {{#each betConfigs}}
+    <form action="/match/bet" method="POST">
+      {{!-- <input type="hidden" name="_csrf" value="{{csrfToken}}"> --}}
+      <input type="hidden" name="team" value="{{this.team}}">
+      <input type="hidden" name="matchId" value="{{this.matchId}}">
+      <button>
+        {{ this.teamLabel }}
+        {{ this.odds }}
+        {{ this.hasBet }}
+      </button>
+    </form>
+  {{/each}}
+</div>
+
+{{!-- Place your bets! Odds: --}}
+{{!-- 
+{{#each match.sites.[0].odds.h2h}}
+  <pre>
+    {{this}}
+  </pre>
+{{/each}} --}}

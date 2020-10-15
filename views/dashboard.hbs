@@ -1,0 +1,30 @@
+
+<div class="container s12">
+    <div class="col s12 m4 13 z-depth-2">
+ <span style="text-align: center;"><h4>England Premier League</h4></span>
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Team 1</th>
+            <th>Time</th>
+            <th>Team 2</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        
+         {{#each matches}}
+            <tr onclick="location.assign('/match/{{this.matchId}}')">
+                <td>{{ this.teams.[0] }}</td>
+                <td>{{ this.time_london }}</td>
+                <td>{{ this.teams.[1] }}</td>
+            </tr>
+        {{/each}}
+        
+    </tbody>
+</table>
+</div>
+</div>
+ 
+<!--script src="/js/soccer.js"></script-->
+
