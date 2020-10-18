@@ -43,7 +43,7 @@ app.use(session({
 }))
 
 // enable cookies (needed for CSRF)
-app.use(cookieParser());
+app.use(cookieParser()); // hello
 
 // enable bodyParser (needed to easily access req.body data)
 // parse application/x-www-form-urlencoded
