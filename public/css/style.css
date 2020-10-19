@@ -17,8 +17,18 @@ tr:hover {
 }
 
 .match-odds-cont {
+    margin-top: 18px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
+.match-title {
+    font-size: 17px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
